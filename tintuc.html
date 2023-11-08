@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+      integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <title>dientu-tintuc</title>
+    <link rel="stylesheet" href="tintuc.css" />
+    <script src="./news-data.js"></script>
+    <link
+      rel="shortcut icon"
+      id="logotagg"
+      href="./public/images/logo.svg"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <!-- --------------------header-------------------- -->
+    <header>
+      <div id="navigation">
+        <div class="container-sm">
+          <div id="aaa">
+            <a href="./index.html"
+              ><img id="logo" src="./public/images/logo.svg" alt="logo"
+            /></a>
+            <nav id="menu">
+              <div id="menu-item">
+                <a class="nav-link" href="#tong-quan-section">GIỚI THIỆU</a>
+              </div>
+              <div id="menu-item">
+                <a class="nav-link" href="#tinh-nang-section"
+                  >TÍNH NĂNG NỔI BẬT</a
+                >
+              </div>
+              <div id="menu-item">
+                <a class="nav-link" href="#chuc-nang-section"
+                  >CÁC CHỨC NĂNG CHÍNH</a
+                >
+              </div>
+              <div id="menu-item">
+                <a class="nav-link" href="#tin-tuc-section">TIN TỨC</a>
+              </div>
+              <div id="menu-item">
+                <a class="nav-link" href="#lien-he-section">lIÊN HỆ</a>
+              </div>
+            </nav>
+            <div id="nav-mobile">
+              <label for="nav-input-mobile" id="toggle-btn">
+                <i class="fa-solid fa-bars"></i
+              ></label>
+              <input
+                hidden
+                type="checkbox"
+                name=""
+                class="mobile-check"
+                id="nav-input-mobile"
+              />
+              <label for="nav-input-mobile" id="overlay"></label>
+              <nav id="menu-mobile">
+                <label
+                  for="nav-input-mobile"
+                  id="menu-item-mobile-close"
+                  class="text-end"
+                >
+                  <a href="#header-section"
+                    ><img id="logo" src="./public/images/logo.svg" alt="logo"
+                  /></a>
+                  <i class="fa-regular fa-circle-xmark"></i>
+                </label>
+                <a class="nav-mobile-link" href="#tong-quan-section"
+                  ><div id="menu-link-mobile">GIỚI THIỆU</div></a
+                >
+                <a class="nav-mobile-link" href="#tinh-nang-section"
+                  ><div id="menu-link-mobile">TÍNH NĂNG NỔI BẬT</div></a
+                >
+                <a class="nav-mobile-link" href="#chuc-nang-section"
+                  ><div id="menu-link-mobile">CÁC CHỨC NĂNG CHÍNH</div></a
+                >
+                <a class="nav-mobile-link" href="#tin-tuc-section"
+                  ><div id="menu-link-mobile">TIN TỨC</div></a
+                >
+                <a class="nav-mobile-link" href="#lien-he-section"
+                  ><div id="menu-link-mobile">lIÊN HỆ</div></a
+                >
+              </nav>
+            </div>
+            <script>
+              document.querySelectorAll(".nav-mobile-link").forEach((link) => {
+                link.addEventListener("click", () => {
+                  document.getElementById("nav-input-mobile").checked = false;
+                });
+              });
+            </script>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- --------------------header-------------------- -->
+
+    <!-- --------------------main-------------------- -->
+    <main>
+      <!-- --------------------nex tin tuc section-------------------- -->
+      <section id="tintuc-section">
+        <div class="container-lg">
+          <div class="tintuc-noidung">
+            <div class="tintuc-title">
+              <span
+                >Khai trương Hệ thống vé điện tử tại Quần thể Di tích Cố đô
+                Huế</span
+              >
+            </div>
+            <div class="tintuc-update">
+              <span>Cập nhật:30/06/2023 5:44:00 CH</span>
+            </div>
+            <div class="tintuc-content">
+              <p>
+                6 tháng đầu năm, kinh tế-xã hội của tỉnh Thừa Thiên Huế tiếp tục
+                duy trì tốc độ tăng trưởng ổn định, ngành du lịch có nhiều khởi
+                sắc. Đời sống vật chất và tinh thần của người dân được nâng lên.
+                An sinh, phúc lợi xã hội được đảm bảo.
+              </p>
+              <div class="img-tintuc">
+                <img
+                  src="https://xuctiendautu.huecit.vn/Portals/0/Medias/Nam2023/T8/XucTienDauTu_ThuaThienHue2023_Di-san-hue.jpg"
+                  alt=""
+                />
+              </div>
+              <p>
+                6 tháng đầu năm 2023, lượng khách du lịch đến tỉnh Thừa Thiên
+                Huế đạt khoảng hơn 1,6 triệu lượt, gấp 2,3 lần so với cùng kỳ
+                năm 2022 - Ảnh: VGP/Lê Hoàng
+              </p>
+              <p>
+                Ngày 29/6, UBND tỉnh Thừa Thiên Huế cho biết, 6 tháng đầu năm
+                2023, tình hình kinh tế-xã hội của tỉnh tiếp tục đạt được nhiều
+                kết quả tích cực. Tốc độ tăng trưởng GRDP ước đạt 6,51%, cao hơn
+                mức bình quân chung của cả nước, xếp thứ 25/63 tỉnh, thành phố,
+                đứng thứ 8/14 tỉnh, thành phố vùng Bắc Trung Bộ và Duyên hải
+                miền Trung; có tốc độ tăng trưởng dẫn đầu trong 5 tỉnh, thành
+                phố vùng kinh tế trọng điểm miền Trung.
+              </p>
+              <p>
+                Nổi bật là khu vực dịch vụ tăng trưởng mạnh trở lại với mức tăng
+                8,35%, chiếm 49,7% trong cơ cấu kinh tế. 6 tháng qua, lượng
+                khách du lịch đạt khoảng hơn 1,6 triệu lượt, gấp 2,3 lần so với
+                cùng kỳ năm 2022, trong đó khách quốc tế đạt khoảng 567.200
+                lượt, gấp 44,8 lần. Tổng thu từ du lịch 6 tháng ước đạt khoảng
+                3.494 tỷ đồng, gấp 2,5 lần so với cùng kỳ năm trước.
+              </p>
+              <p>
+                Khu vực công nghiệp-xây dựng tăng trưởng 2,95%. Khu vực nông,
+                lâm, thủy sản tiếp tục là trụ đỡ của nền kinh tế, sản xuất nông
+                nghiệp được mùa toàn diện, tăng trưởng 9,48%.
+              </p>
+              <p>
+                Tổng thu ngân sách Nhà nước trên địa bàn ước đạt 4.950 tỷ đồng,
+                bằng 49,9% dự toán.
+              </p>
+              <p>
+                Từ đầu năm đến nay, có 415 doanh nghiệp thành lập mới với tổng
+                số vốn đăng ký 2.749 tỷ đồng; đã cấp mới 9 dự án với tổng vốn
+                đầu tư đăng ký 3.705,8 tỷ đồng; cấp giấy chấp thuận chủ trương
+                đầu tư cho 7 dự án với tổng mức đầu tư khoảng 1.589,3 tỷ đồng.
+              </p>
+
+              <p>
+                Tổng vốn đầu tư công năm 2023 của tỉnh đã giao là 8.091,097 tỷ
+                đồng, giải ngân đến ngày 20/6 là 2.097,649 tỷ đồng, đạt 25,9% kế
+                hoạch. Dự kiến đến ngày 30/6, tỉ lệ giải ngân chung toàn tỉnh
+                đạt khoảng 36%.
+              </p>
+              <p>
+                Trong 6 tháng đầu năm, tỉnh Thừa Thiên Huế đã hoàn thành và đưa
+                vào khai thác nhà ga hành khách T2 sân bay Phú Bài. Tiếp tục ưu
+                tiên đầu tư các dự án nhằm tạo động lực và có tính chất lan tỏa
+                phát triển kinh tế-xã hội.
+              </p>
+              <p>
+                Trong đó, tập trung hoàn thành các tuyến đường Phú Mỹ-Thuận An,
+                đường Chợ Mai-Tân Mỹ, đường phía Tây phá Tam Giang-Cầu Hai (đoạn
+                Phú Mỹ-Phú Đa) trong năm 2023; đẩy nhanh tiến độ thực hiện các
+                dự án tuyến đường bộ ven biển, đường Nguyễn Hoàng và cầu vượt
+                sông Hương, đê chắn sóng cảng Chân Mây giai đoạn 2; hoàn thiện
+                thủ tục chuẩn bị đầu tư các dự án đường Tố Hữu nối dài đi sân
+                bay Phú Bài và đường Vành đai 3…
+              </p>
+              <p>
+                Bên cạnh kết quả đạt được, báo cáo của UBND tỉnh Thừa Thiên Huế
+                cũng thẳng thắn nhìn nhận, tốc độ tăng trưởng GRDP vẫn thấp hơn
+                so với kịch bản tăng trưởng 9-10%. Đây sẽ là thách thức rất lớn
+                để hoàn thành chỉ tiêu tăng trưởng năm 2023. Hoạt động sản xuất
+                kinh doanh, sản xuất công nghiệp, xuất khẩu… tiếp tục gặp nhiều
+                khó khăn.
+              </p>
+              <p>
+                Tại phiên họp thường kỳ tháng 6, Chủ tịch UBND tỉnh Thừa Thiên
+                Huế Nguyễn Văn Phương đã yêu cầu các sở, ban ngành, địa phương
+                cần tập trung quyết liệt các nhiệm vụ, giải pháp nhằm thúc đẩy
+                phát triển kinh tế-xã hội, phấn đấu hoàn thành nhiệm vụ của 6
+                tháng cuối năm.
+              </p>
+              <p>
+                Chủ tịch UBND tỉnh cũng lưu ý đến các giải pháp căn cơ, trong đó
+                đặc biệt quan tâm đến việc triển khai hiệu quả các nhiệm vụ,
+                giải pháp để thu hút đầu tư vào những lĩnh vực lớn, có thế mạnh;
+                riêng lĩnh vực du lịch cần đa dạng các phân khúc khách hàng, thị
+                trường.
+              </p>
+              <p>
+                Liên quan đến giải ngân vốn đầu tư công, đảm bảo hoàn thành kế
+                hoạch thu ngân sách năm 2023, ông Nguyễn Văn Phương yêu cầu các
+                sở, ngành, địa phương quyết liệt đẩy nhanh tiến độ giải ngân các
+                dự án thuộc Chương trình phục hồi và phát triển kinh tế-xã hội,
+                3 chương trình mục tiêu quốc gia; các công trình, dự án khắc
+                phục hậu quả thiên tai năm 2022.
+              </p>
+              <p>
+                Đặc biệt lưu ý đến công tác giải phóng mặt bằng, bồi thường, hỗ
+                trợ tái định cư, tiến độ thi công, tháo gỡ các khó khăn vướng
+                mắc về đất đai, tài nguyên… để đẩy nhanh tiến độ thực hiện dự
+                án, nhất là các dự án trọng điểm của tỉnh. Phấn đấu hoàn thành
+                giải ngân 100% kế hoạch vốn.
+              </p>
+              <p>
+                "Đối với các chỉ tiêu được đề ra đầu năm chúng ta cần lưu ý phấn
+                đấu hoàn thành và vượt kế hoạch thu ngân sách Nhà nước năm 2023
+                trên 13.000 tỷ đồng; triển khai hiệu quả các kế hoạch nâng cao
+                các chỉ số hành chính về PAR-Index, PAPI-Index, PCI, ICT, đặc
+                biệt là các giải pháp nâng cao các chỉ số quan trọng giảm hạng
+                trong năm 2022", Chủ tịch UBND tỉnh Thừa Thiên Huế lưu ý.
+              </p>
+            </div>
+            <div class="tacgia-tintuc">
+              <p class="tacgiat-tintuc-name">Nhật Anh</p>
+              <p class="tacgiat-tintuc-for">Báo điện tử Chính phủ</p>
+              <a class="tacgiat-tintuc-type">[ Bản In ]</a>
+            </div>
+            <div class="tintuc-news">
+              <div class="new-tintuc-title">Các bài khác</div>
+              <div class="list-tintuc">
+                <!-- <div class="new-tintuc-list">
+                  <a href=""
+                    >Thừa Thiên - Huế cấp phép đầu tư 9 dự án mới, tổng vốn hơn
+                    2.000 tỷ
+                  </a>
+                  <p>(3.6.2023)</p>
+                </div>
+                <div class="new-tintuc-list">
+                  <a href=""
+                    >Tỉnh Thừa Thiên Huế mở rộng hợp tác địa phương, xúc tiến
+                    đầu tư và kết nối giao thương với Hàn Quốc
+                  </a>
+                  <p>(30.5.2023)</p>
+                </div>
+                <div class="new-tintuc-list">
+                  <a href=""
+                    >Thừa Thiên Huế luôn là địa phương đi đầu chuyển đổi số
+                  </a>
+                  <p>(23.4.2023)</p>
+                </div>
+                <div class="new-tintuc-list">
+                  <a href=""
+                    >Tập đoàn Công nghệ Xelex tìm hiểu cơ hội đầu tư tại tỉnh
+                    Thừa Thiên Huế
+                  </a>
+                  <p>(10.12.2022)</p>
+                </div>
+                <div class="new-tintuc-list">
+                  <a href=""
+                    >Thừa Thiên - Huế: Công bố quyết định thành lập Ban Quản lý
+                    dự án Đầu tư xây dựng và Phát triển đô thị tỉnh
+                  </a>
+                  <p>(23.8.2022)</p>
+                </div>
+                <div class="new-tintuc-list">
+                  <a href=""
+                    >Thừa Thiên Huế tổ chức chuyến công tác xúc tiến đầu tư tại
+                    Nhật Bản
+                  </a>
+                  <p>(28.7.2022)</p>
+                </div>
+                <div class="new-tintuc-list">
+                  <a href=""
+                    >Thừa Thiên Huế cấp 18 dự án mới đầu tư vào địa phương
+                  </a>
+                  <p>(16.7.2022)</p>
+                </div>
+                <div class="new-tintuc-list">
+                  <a href=""
+                    >Thu hút FDI: Tỉnh Thừa Thiên Huế quyết tâm đạt mục tiêu kép
+                  </a>
+                  <p>(1.5.2022)</p>
+                </div>
+                <div class="new-tintuc-list">
+                  <a href=""
+                    >Thừa Thiên Huế đặt mục tiêu thu hút hàng chục nghìn tỷ đồng
+                    vốn đầu tư trong năm 2022
+                  </a>
+                  <p>(15.3.2022)</p>
+                </div>
+                <div class="new-tintuc-list">
+                  <a href="">Huế sẽ có dự án khu phần mềm hơn 3.000 tỉ đồng </a>
+                  <p>(15.2.2022)</p>
+                </div> -->
+              </div>
+              <div class="phantrang">
+                <div class="pagination">
+                  <!-- <a class="active" href="#" id="Previous">&laquo;</a>
+                  <a class="active" href="#">1</a>
+                  <a href="#">2</a>
+                  <a href="#">3</a>
+                  <a href="#">4</a>
+                  <a href="#">5</a>
+                  <a href="#">6</a>
+                  <a href="#" id="Next">&raquo;</a> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- --------------------nex tin tuc section-------------------- -->
+
+      <!-- --------------------lien he section-------------------- -->
+      <section id="lien-he-section">
+        <div class="container-sm">
+          <div class="lien-he-content">
+            <div class="infomation">
+              <div class="info-title">
+                <p class="info-title-title">LIÊN HỆ</p>
+                <p class="info-title-content">ĐĂNG KÝ DÙNG THỬ</p>
+              </div>
+              <div class="info-contact">
+                <div class="contact-list">
+                  <img src="./public/images/lienhe1.svg" alt="" />
+                  <div class="contact-noidung">
+                    <p class="contact-noidung-title">
+                      TRUNG TÂM CÔNG NGHỆ THÔNG TIN TỈNH THỪA THIÊN HUẾ
+                    </p>
+                    <div class="contact-info">
+                      <p class="contact-p-info">
+                        06 Lê Lợi, phường Vĩnh Ninh, thành phố Huế
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="contact-list">
+                  <img src="./public/images/lienhe2.svg" alt="" />
+                  <div class="contact-noidung">
+                    <p class="contact-noidung-title">SỐ ĐIỆN THOẠI</p>
+                    <div class="contact-info">
+                      <p class="contact-p-info">
+                        (+84) 234 3823077 - nhánh số 19
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="contact-list">
+                  <img src="./public/images/lienhe3.svg" alt="" />
+                  <div class="contact-noidung">
+                    <p class="contact-noidung-title">HOTLINE</p>
+                    <div class="contact-info">
+                      <p class="contact-p-info">
+                        (+84) 905 339 757 - (+84) 935 787 224
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="contact-list">
+                  <img src="./public/images/lienhe4.svg" alt="" />
+                  <div class="contact-noidung">
+                    <p class="contact-noidung-title">EMAIL</p>
+                    <div class="contact-info">
+                      <p class="contact-p-info">sales@huecit.vn</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="contact-list">
+                  <img src="./public/images/lienhe5.svg" alt="" />
+                  <div class="contact-noidung">
+                    <p class="contact-noidung-title">WEBSITE</p>
+                    <div class="contact-info">
+                      <p class="contact-p-info">www.huecit.vn</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="contact-form">
+              <form class="contact-form-form" action="">
+                <div id="form-input-name">
+                  <label for="">Họ và tên</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="name"
+                    id="input-form-contact-name"
+                    placeholder="Ví dụ: Nguyễn Văn A"
+                  />
+                </div>
+                <div id="form-row">
+                  <div id="form-input-row-email">
+                    <label for="">Email</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="email"
+                      id="input-form-contact-row"
+                      placeholder="nva@gmail.com"
+                    />
+                  </div>
+                  <div id="form-input-row-phone">
+                    <label for="">Số điện thoại </label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      name="name"
+                      id="input-form-contact-row"
+                      placeholder="0912 111 222"
+                    />
+                  </div>
+                </div>
+                <div id="form-input-noidung">
+                  <label for="">Nội dung</label>
+                  <textarea
+                    id="input-form-contact"
+                    class="form-control"
+                    aria-label="With textarea"
+                    placeholder="Nhập vào nội dung bạn muốn gửi..."
+                  ></textarea>
+                </div>
+                <div id="button">
+                  <button><p>GỬI</p></button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- --------------------lien he section-------------------- -->
+    </main>
+    <!-- --------------------main-------------------- -->
+
+    <!-- --------------------footer-------------------- -->
+    <footer>
+      <div id="footer">
+        <div class="container-sm">
+          <div class="footer-content">
+            <p class="footer-left">HỆ THỐNG VÉ ĐIỆN TỬ</p>
+            <p class="footer-right">THIẾT KẾ BỞI</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- --------------------footer-------------------- -->
+    <div id="back-to-top" title="Back to Top">
+      <!-- <i class="fa-solid fa-arrow-up"></i> -->
+      <img src="./public/images/backtotop.svg" alt="" />
+    </div>
+  </body>
+  <script>
+    if ($("#back-to-top").length) {
+      var scrollTrigger = 500,
+        backToTop = function () {
+          var scrollTop = $(window).scrollTop();
+          if (scrollTop > scrollTrigger) {
+            $("#back-to-top").addClass("show");
+          } else {
+            $("#back-to-top").removeClass("show");
+          }
+        };
+      backToTop();
+      $(window).on("scroll", function () {
+        backToTop();
+      });
+      $("#back-to-top").on("click", function (e) {
+        e.preventDefault();
+        $("html,body").animate(
+          {
+            scrollTop: 0,
+          },
+          500
+        );
+      });
+    }
+  </script>
+</html>

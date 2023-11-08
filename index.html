@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+      integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <title>dientu</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="shortcut icon"
+      id="logotagg"
+      href="./public/images/logo.svg"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <!-- --------------------header-------------------- -->
+    <header>
+      <div id="navigation">
+        <div class="container-sm">
+          <div id="aaa">
+            <a href="./index.html"
+              ><img id="logo" src="./public/images/logo.svg" alt="logo"
+            /></a>
+            <nav id="menu">
+              <div id="menu-item">
+                <a class="nav-link" href="#tong-quan-section">GIỚI THIỆU</a>
+              </div>
+              <div id="menu-item">
+                <a class="nav-link" href="#tinh-nang-section"
+                  >TÍNH NĂNG NỔI BẬT</a
+                >
+              </div>
+              <div id="menu-item">
+                <a class="nav-link" href="#chuc-nang-section-1"
+                  >CÁC CHỨC NĂNG CHÍNH</a
+                >
+              </div>
+              <div id="menu-item">
+                <a class="nav-link" href="#tin-tuc-section">TIN TỨC</a>
+              </div>
+              <div id="menu-item">
+                <a class="nav-link" href="#lien-he-section">lIÊN HỆ</a>
+              </div>
+            </nav>
+            <div id="nav-mobile">
+              <label for="nav-input-mobile" id="toggle-btn">
+                <i class="fa-solid fa-bars"></i
+              ></label>
+              <input
+                hidden
+                type="checkbox"
+                name=""
+                class="mobile-check"
+                id="nav-input-mobile"
+              />
+              <label for="nav-input-mobile" id="overlay"></label>
+              <nav id="menu-mobile">
+                <label
+                  for="nav-input-mobile"
+                  id="menu-item-mobile-close"
+                  class="text-end"
+                >
+                  <a href="#header-section"
+                    ><img id="logo" src="./public/images/logo.svg" alt="logo"
+                  /></a>
+                  <i class="fa-regular fa-circle-xmark"></i>
+                </label>
+                <a class="nav-mobile-link" href="#tong-quan-section"
+                  ><div id="menu-link-mobile">GIỚI THIỆU</div></a
+                >
+                <a class="nav-mobile-link" href="#tinh-nang-section"
+                  ><div id="menu-link-mobile">TÍNH NĂNG NỔI BẬT</div></a
+                >
+                <a class="nav-mobile-link" href="#chuc-nang-section-1"
+                  ><div id="menu-link-mobile">CÁC CHỨC NĂNG CHÍNH</div></a
+                >
+                <a class="nav-mobile-link" href="#tin-tuc-section"
+                  ><div id="menu-link-mobile">TIN TỨC</div></a
+                >
+                <a class="nav-mobile-link" href="#lien-he-section"
+                  ><div id="menu-link-mobile">lIÊN HỆ</div></a
+                >
+              </nav>
+            </div>
+            <script>
+              document.querySelectorAll(".nav-mobile-link").forEach((link) => {
+                link.addEventListener("click", () => {
+                  document.getElementById("nav-input-mobile").checked = false; // Ẩn menu-mobile
+                });
+              });
+            </script>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- --------------------header-------------------- -->
+
+    <!-- --------------------main-------------------- -->
+    <main>
+      <!-- --------------------header section-------------------- -->
+      <section id="header-section">
+        <div class="container-sm">
+          <div id="banner">
+            <div id="content">
+              <div id="title">
+                <p id="header-section-title-title">HỆ THỐNG VÉ ĐIỆN TỬ</p>
+                <p id="header-section-title-content">
+                  Nhanh chóng, tiện lợi cho du khách
+                </p>
+              </div>
+              <div id="group-button">
+                <button id="button1">
+                  <a class="nav-link" href="#lien-he-section"
+                    >ĐĂNG KÝ dùng thử</a
+                  >
+                </button>
+                <button id="button2">
+                  <a class="nav-link" href="#tong-quan-section"
+                    >TÌM HIỂU TÍNH NĂNG</a
+                  >
+                </button>
+              </div>
+            </div>
+            <img src="./public/images/banner-image-header-section.png" alt="" />
+          </div>
+        </div>
+      </section>
+      <!-- --------------------header section-------------------- -->
+
+      <!-- --------------------tong quan section-------------------- -->
+      <section id="tong-quan-section">
+        <div class="container-sm">
+          <div id="layout">
+            <img src="./public/images/Mask-group.png" alt="" />
+            <div id="tong-quan-content">
+              <div id="title">
+                <p id="tong-quan-section-title-title">TỔNG QUAN</p>
+                <p id="tong-quan-section-title-content">HỆ THỐNG VÉ ĐIỆN TỬ</p>
+              </div>
+              <p class="noidung">
+                Là một giải pháp mang lại nhiều tiện ích cho du khách trong việc
+                chủ động mua vé mọi lúc mọi nơi, hỗ trợ thanh toán không dùng
+                tiền mặt, thông qua các thiết bị cá nhân có kết nối Internet như
+                máy tính, điện thoại di động, máy tính bảng… Hệ thống Vé điện tử
+                còn giúp tăng năng suất, giảm chi phí, gia tăng hiệu quả quản lý
+                cho đơn vị chủ quản, thúc đẩy quá trình chuyển đổi số tại mỗi cơ
+                quan, đơn vị, phù hợp với xu hướng phát triển của cuộc cách mạng
+                công nghiệp 4.0.
+              </p>
+              <button id="tong-quan-button">
+                <a class="nav-link" href="#lien-he-section">liên hệ ngay</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- --------------------tong quan section-------------------- -->
+
+      <!-- --------------------tinh nang section-------------------- -->
+      <section id="tinh-nang-section">
+        <div class="container-sm">
+          <div class="tinh-nang-section-noi-dung">
+            <div id="tinh-nang-title">
+              <p id="tinh-nang-title-title">TÍNH NĂNG</p>
+              <p id="tinh-nang-title-content">TÍNH NĂNG NỔI BẬT</p>
+            </div>
+            <div id="tinh-nang-content">
+              <div id="tinh-nang-lists">
+                <div id="tinh-nang-item">
+                  <img
+                    id="tinh-nang-item-image"
+                    src="./public/images/Frame 20.png"
+                    alt=""
+                  />
+                  <div id="tinh-nang-item-content">
+                    <p id="item-content-title">Mua vé mọi lúc mọi nơi</p>
+                    <p id="item-content-content">
+                      Hệ thống Vé điện tử cho phép du khách tìm hiểu thông tin
+                      và mua vé trực tuyến cho các điểm tham quan. Khách hàng có
+                      thể mua vé trực tiếp tại điểm tham quan hoặc đặt vé trước
+                      qua máy tính, điện thoại, máy tính bảng. Hệ thống cung cấp
+                      nhiều tùy chọn đối tượng và chính sách giá vé linh hoạt để
+                      thuận lợi cho khách hàng và đơn vị lữ hành. Sau khi thanh
+                      toán, vé có thể được xuất in hoặc gửi qua email hoặc lưu
+                      mã QR code trên điện thoại.
+                    </p>
+                  </div>
+                </div>
+                <div id="tinh-nang-item">
+                  <img
+                    id="tinh-nang-item-image"
+                    src="./public/images/Frame 21.png"
+                    alt=""
+                  />
+                  <div id="tinh-nang-item-content">
+                    <p id="item-content-title">Thanh toán thuận tiện</p>
+                    <p id="item-content-content">
+                      Hệ thống Vé điện tử hỗ trợ hầu hết các hình thức thanh
+                      toán: thanh toán trực tuyến qua internet banking, thẻ tín
+                      dụng, ví điện tử; thanh toán trực tiếp bằng tiền mặt; đặt
+                      vé trước, thanh toán sau v.v…
+                    </p>
+                  </div>
+                </div>
+                <div id="tinh-nang-item">
+                  <img
+                    id="tinh-nang-item-image"
+                    src="./public/images/Frame 22.png"
+                    alt=""
+                  />
+                  <div id="tinh-nang-item-content">
+                    <p id="item-content-title">
+                      Xuất biên lai điện tử nhanh chóng
+                    </p>
+                    <p id="item-content-content">
+                      Hệ thống Vé điện tử cho phép khách hàng cung cấp thông tin
+                      để in/nhận biên lai điện tử cho mỗi giao dịch.
+                    </p>
+                  </div>
+                </div>
+                <div id="tinh-nang-item">
+                  <img
+                    id="tinh-nang-item-image"
+                    src="./public/images/Frame 23.png"
+                    alt=""
+                  />
+                  <div id="tinh-nang-item-content">
+                    <p id="item-content-title">Kiểm soát vé linh hoạt</p>
+                    <p id="item-content-content">
+                      Hệ thống Vé điện tử có thể triển khai linh hoạt với nhiều
+                      loại thiết bị kiểm soát vào cửa như: Cổng xoay tự động,
+                      barie tự động, mắt đọc QR code, thiết bị di động v.v… Vé
+                      điện tử được lưu giữ và giám sát thông tin trên hệ thống
+                      từ thời điểm vé được bán ra đến quá trình vé được sử dụng,
+                      nâng cao tính minh bạch, an toàn trong quản lý vé.
+                    </p>
+                  </div>
+                </div>
+                <div id="tinh-nang-item">
+                  <img
+                    id="tinh-nang-item-image"
+                    src="./public/images/Frame 24.png"
+                    alt=""
+                  />
+                  <div id="tinh-nang-item-content">
+                    <p id="item-content-title">Thống kê, báo cáo trực quan</p>
+                    <p id="item-content-content">
+                      Hệ thống Vé điện tử cung cấp bộ công cụ thống kê trực quan
+                      theo nhiều tiêu chí (đối tượng khách hàng, thời gian, địa
+                      điểm, doanh thu, loại vé …); cho phép theo dõi biến động
+                      số lượng vé bán ra, trạng thái sử dụng, doanh thu tức thời
+                      tại mỗi điểm tham quan.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <img
+                id="tinh-nang-section-image"
+                src="./public/images/OBJECTS.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- --------------------tinh nang section-------------------- -->
+
+      <!-- --------------------chuc nang section-------------------- -->
+      <section id="chuc-nang-section-1">
+        <div class="container-sm">
+          <div class="chuc-nang">
+            <div class="chuc-nang-title">
+              <p class="chuc-nang-title-1">CHỨC NĂNG</p>
+              <p class="chuc-nang-title-2">NHÓM CHỨC NĂNG CHÍNH</p>
+            </div>
+            <div class="chuc-nang-content">
+              <img
+                class="chucnang-content-img"
+                src="./public/images/chucnang1.png"
+                alt=""
+              />
+              <div class="chuc-nang-content-content">
+                <p class="chuc-nang-content-content-titlep">
+                  Dành cho du khách
+                </p>
+                <div class="chuc-nang-content-content-list">
+                  <div class="chuc-nang-content-content-item">
+                    <div class="list-img">
+                      <img src="./public/images/Vectordautich.png" alt="" />
+                    </div>
+                    <p class="chuc-nang-content-content-item-ppp">
+                      Tìm hiểu các điểm tham quan, du lịch.
+                    </p>
+                  </div>
+                  <div class="chuc-nang-content-content-item">
+                    <div class="list-img">
+                      <img src="./public/images/Vectordautich.png" alt="" />
+                    </div>
+                    <p class="chuc-nang-content-content-item-ppp">
+                      Nhận thông tin các thời điểm miễn phí tham quan, chính
+                      sách giảm giá vé
+                    </p>
+                  </div>
+                  <div class="chuc-nang-content-content-item">
+                    <div class="list-img">
+                      <img src="./public/images/Vectordautich.png" alt="" />
+                    </div>
+                    <p class="chuc-nang-content-content-item-ppp">
+                      Đặt vé/ Mua vé trực tuyến mọi lúc mọi nơi, thanh toán linh
+                      động
+                    </p>
+                  </div>
+                  <div class="chuc-nang-content-content-item">
+                    <div class="list-img">
+                      <img src="./public/images/Vectordautich.png" alt="" />
+                    </div>
+                    <p class="chuc-nang-content-content-item-ppp">
+                      Lưu trữ thông tin và sử dụng vé đơn giản, an toàn
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="chuc-nang-section-2">
+        <div class="container-sm">
+          <div class="chuc-nang-content">
+            <div class="chuc-nang-content-content">
+              <p class="chuc-nang-content-content-titlep">Dành cho du khách</p>
+              <div class="chuc-nang-content-content-list">
+                <div class="chuc-nang-content-content-item">
+                  <div class="list-img">
+                    <img src="./public/images/Vectordautich.png" alt="" />
+                  </div>
+                  <p class="chuc-nang-content-content-item-ppp">
+                    Tìm hiểu các điểm tham quan, du lịch.
+                  </p>
+                </div>
+                <div class="chuc-nang-content-content-item">
+                  <div class="list-img">
+                    <img src="./public/images/Vectordautich.png" alt="" />
+                  </div>
+                  <p class="chuc-nang-content-content-item-ppp">
+                    Nhận thông tin các thời điểm miễn phí tham quan, chính sách
+                    giảm giá vé
+                  </p>
+                </div>
+                <div class="chuc-nang-content-content-item">
+                  <div class="list-img">
+                    <img src="./public/images/Vectordautich.png" alt="" />
+                  </div>
+                  <p class="chuc-nang-content-content-item-ppp">
+                    Đặt vé/ Mua vé trực tuyến mọi lúc mọi nơi, thanh toán linh
+                    động
+                  </p>
+                </div>
+                <div class="chuc-nang-content-content-item">
+                  <div class="list-img">
+                    <img src="./public/images/Vectordautich.png" alt="" />
+                  </div>
+                  <p class="chuc-nang-content-content-item-ppp">
+                    Lưu trữ thông tin và sử dụng vé đơn giản, an toàn
+                  </p>
+                </div>
+              </div>
+            </div>
+            <img
+              class="chucnang-content-img"
+              src="./public/images/chucnang2.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+      <section id="chuc-nang-section-3">
+        <div class="container-sm">
+          <div class="chuc-nang-content">
+            <img
+              class="chucnang-content-img"
+              src="./public/images/chucnang3.png"
+              alt=""
+            />
+            <div class="chuc-nang-content-content">
+              <p class="chuc-nang-content-content-titlep">Dành cho du khách</p>
+              <div class="chuc-nang-content-content-list">
+                <div class="chuc-nang-content-content-item">
+                  <div class="list-img">
+                    <img src="./public/images/Vectordautich.png" alt="" />
+                  </div>
+                  <p class="chuc-nang-content-content-item-ppp">
+                    Tìm hiểu các điểm tham quan, du lịch.
+                  </p>
+                </div>
+                <div class="chuc-nang-content-content-item">
+                  <div class="list-img">
+                    <img src="./public/images/Vectordautich.png" alt="" />
+                  </div>
+                  <p class="chuc-nang-content-content-item-ppp">
+                    Nhận thông tin các thời điểm miễn phí tham quan, chính sách
+                    giảm giá vé
+                  </p>
+                </div>
+                <div class="chuc-nang-content-content-item">
+                  <div class="list-img">
+                    <img src="./public/images/Vectordautich.png" alt="" />
+                  </div>
+                  <p class="chuc-nang-content-content-item-ppp">
+                    Đặt vé/ Mua vé trực tuyến mọi lúc mọi nơi, thanh toán linh
+                    động
+                  </p>
+                </div>
+                <div class="chuc-nang-content-content-item">
+                  <div class="list-img">
+                    <img src="./public/images/Vectordautich.png" alt="" />
+                  </div>
+                  <p class="chuc-nang-content-content-item-ppp">
+                    Lưu trữ thông tin và sử dụng vé đơn giản, an toàn
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="chuc-nang-section-2">
+        <div class="container-sm">
+          <div class="chuc-nang-content">
+            <div class="chuc-nang-content-content">
+              <p class="chuc-nang-content-content-titlep">Dành cho du khách</p>
+              <div class="chuc-nang-content-content-list">
+                <div class="chuc-nang-content-content-item">
+                  <div class="list-img">
+                    <img src="./public/images/Vectordautich.png" alt="" />
+                  </div>
+                  <p class="chuc-nang-content-content-item-ppp">
+                    Tìm hiểu các điểm tham quan, du lịch.
+                  </p>
+                </div>
+                <div class="chuc-nang-content-content-item">
+                  <div class="list-img">
+                    <img src="./public/images/Vectordautich.png" alt="" />
+                  </div>
+                  <p class="chuc-nang-content-content-item-ppp">
+                    Nhận thông tin các thời điểm miễn phí tham quan, chính sách
+                    giảm giá vé
+                  </p>
+                </div>
+                <div class="chuc-nang-content-content-item">
+                  <div class="list-img">
+                    <img src="./public/images/Vectordautich.png" alt="" />
+                  </div>
+                  <p class="chuc-nang-content-content-item-ppp">
+                    Đặt vé/ Mua vé trực tuyến mọi lúc mọi nơi, thanh toán linh
+                    động
+                  </p>
+                </div>
+                <div class="chuc-nang-content-content-item">
+                  <div class="list-img">
+                    <img src="./public/images/Vectordautich.png" alt="" />
+                  </div>
+                  <p class="chuc-nang-content-content-item-ppp">
+                    Lưu trữ thông tin và sử dụng vé đơn giản, an toàn
+                  </p>
+                </div>
+              </div>
+            </div>
+            <img
+              class="chucnang-content-img"
+              src="./public/images/chucnang4.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+      <!-- --------------------chuc nang section-------------------- -->
+
+      <!-- --------------------thiet bi section-------------------- -->
+      <section id="thiet-bi-section">
+        <div class="container-sm">
+          <div class="thiet-bi-section-noidung">
+            <div class="thiet-bi-title">
+              <p class="thiet-bi-title-title">THIẾT BỊ HỆ THỐNG</p>
+              <p class="thiet-bi-title-content">
+                MỘT SỐ THIẾT BỊ TRONG HỆ THỐNG VÉ ĐIỆN TỬ
+              </p>
+            </div>
+            <div class="thiet-bi-content">
+              <div class="list-thiet-bi">
+                <img src="./public/images/thietbi1.png" alt="" />
+                <p>Màn hình hiển thị lượt quét</p>
+              </div>
+              <div class="list-thiet-bi">
+                <img src="./public/images/thietbi2.png" alt="" />
+                <p>Cổng xoay bằng trục</p>
+              </div>
+              <div class="list-thiet-bi">
+                <img src="./public/images/thietbi3.png" alt="" />
+                <p>Camera quan sát</p>
+              </div>
+              <div class="list-thiet-bi">
+                <img src="./public/images/thietbi4.png" alt="" />
+                <p>Đầu đọc thẻ cảm ứng</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- --------------------thiet bi section-------------------- -->
+
+      <!-- --------------------tin tuc section-------------------- -->
+      <section id="tin-tuc-section">
+        <div class="container-sm">
+          <div class="tin-tuc-section-content">
+            <div class="tin-tuc-title">
+              <p class="tin-tuc-title-title">TIN TỨC</p>
+              <p class="tin-tuc-title-content">TIN TỨC LIÊN QUAN</p>
+            </div>
+            <div class="tin-tuc-content">
+              <a href="./tintuc.html"
+                ><div class="tin-tuc-list">
+                  <div class="item-list-top">
+                    <img src="./public/images/tintuc1.png" alt="" />
+                    <div class="time-tin-tuc">
+                      <p class="time-day">20</p>
+                      <p class="time-year">12.2022</p>
+                    </div>
+                  </div>
+                  <div class="item-list-bottom">
+                    <p class="item-list-bottom-title">
+                      Khai trương Hệ thống vé điện tử tại Quần thể Di tích Cố đô
+                      Huế
+                    </p>
+                    <p class="item-list-bottom-content">
+                      Sáng 20/12, tại Ngọ Môn, Đại Nội Huế, Trung tâm Bảo tồn Di
+                      tích Cố đô Huế tổ chức khai trương Hệ thống vé điện tử và
+                      dịch vụ trải nghiệm thực tế ảo XR tại Quần thể Di tích Cố
+                      đô Huế.
+                    </p>
+                  </div>
+                </div>
+              </a>
+              <a href="./tintuc.html"
+                ><div class="tin-tuc-list">
+                  <div class="item-list-top">
+                    <img src="./public/images/tintuc1.png" alt="" />
+                    <div class="time-tin-tuc">
+                      <p class="time-day">20</p>
+                      <p class="time-year">12.2022</p>
+                    </div>
+                  </div>
+                  <div class="item-list-bottom">
+                    <p class="item-list-bottom-title">
+                      Hệ thống vé điện tử, trải nghiệm thực tế ảo ở di tích Huế
+                    </p>
+                    <p class="item-list-bottom-content">
+                      Ngày 19.12, tại Ngọ Môn, Đại Nội - Huế, Trung tâm Bảo tồn
+                      Di tích Cố đô Huế đã tổ chức lễ Khai trương Hệ thống vé
+                      điện tử và dịch vụ trải nghiệm thực tế ảo
+                    </p>
+                  </div>
+                </div></a
+              >
+              <a href="./tintuc.html"
+                ><div class="tin-tuc-list">
+                  <div class="item-list-top">
+                    <img src="./public/images/tintuc1.png" alt="" />
+                    <div class="time-tin-tuc">
+                      <p class="time-day">20</p>
+                      <p class="time-year">12.2022</p>
+                    </div>
+                  </div>
+                  <div class="item-list-bottom">
+                    <p class="item-list-bottom-title">
+                      Khai trương hệ thống vé điện tử tại Quần thể Di tích Cố đô
+                      Huế
+                    </p>
+                    <p class="item-list-bottom-content">
+                      Ngày 20/12, tại khu vực Đại Nội Huế, Trung tâm Bảo tồn Di
+                      tích Cố đô Huế tổ chức lễ khai trương hệ thống vé điện tử
+                      và dịch vụ trải nghiệm thực tế ảo XR nhằm nâng cao chất
+                      lượng dịch vụ du lịch, bổ sung sản phẩm trải nghiệm mới
+                      tại Quần thể di tích Cố đô Huế.
+                    </p>
+                  </div>
+                </div></a
+              >
+              <a href="./tintuc.html"
+                ><div class="tin-tuc-list">
+                  <div class="item-list-top">
+                    <img src="./public/images/tintuc2.png" alt="" />
+                    <div class="time-tin-tuc">
+                      <p class="time-day">20</p>
+                      <p class="time-year">12.2022</p>
+                    </div>
+                  </div>
+                  <div class="item-list-bottom">
+                    <p class="item-list-bottom-title">
+                      Khai trương hệ thống vé điện tử và dịch vụ trải nghiệm
+                      thực tế ảo XR
+                    </p>
+                    <p class="item-list-bottom-content">
+                      Sáng 20/12, Trung tâm Bảo tồn Di tích Cố đô Huế khai
+                      trương hệ thống vé điện tử và dịch vụ trải nghiệm thực tế
+                      ảo XR tại Đại Nội. Đến dự sự kiện có các ông: Nguyễn Văn
+                      Phương, Phó Bí thư Tỉnh ủy, Chủ tịch UBND tỉnh; Nguyễn
+                      Thanh Bình, UVTV Tỉnh ủy, Phó Chủ tịch UBND tỉnh.
+                    </p>
+                  </div>
+                </div></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- --------------------tin tuc section-------------------- -->
+
+      <!-- --------------------lien he section-------------------- -->
+      <section id="lien-he-section">
+        <div class="container-sm">
+          <div class="lien-he-content">
+            <div class="infomation">
+              <div class="info-title">
+                <p class="info-title-title">LIÊN HỆ</p>
+                <p class="info-title-content">ĐĂNG KÝ DÙNG THỬ</p>
+              </div>
+              <div class="info-contact">
+                <div class="contact-list">
+                  <img src="./public/images/lienhe1.svg" alt="" />
+                  <div class="contact-noidung">
+                    <p class="contact-noidung-title">
+                      TRUNG TÂM CÔNG NGHỆ THÔNG TIN TỈNH THỪA THIÊN HUẾ
+                    </p>
+                    <div class="contact-info">
+                      <p class="contact-p-info">
+                        06 Lê Lợi, phường Vĩnh Ninh, thành phố Huế
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="contact-list">
+                  <img src="./public/images/lienhe2.svg" alt="" />
+                  <div class="contact-noidung">
+                    <p class="contact-noidung-title">SỐ ĐIỆN THOẠI</p>
+                    <div class="contact-info">
+                      <p class="contact-p-info">
+                        (+84) 234 3823077 - nhánh số 19
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="contact-list">
+                  <img src="./public/images/lienhe3.svg" alt="" />
+                  <div class="contact-noidung">
+                    <p class="contact-noidung-title">HOTLINE</p>
+                    <div class="contact-info">
+                      <p class="contact-p-info">
+                        (+84) 905 339 757 - (+84) 935 787 224
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="contact-list">
+                  <img src="./public/images/lienhe4.svg" alt="" />
+                  <div class="contact-noidung">
+                    <p class="contact-noidung-title">EMAIL</p>
+                    <div class="contact-info">
+                      <p class="contact-p-info">sales@huecit.vn</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="contact-list">
+                  <img src="./public/images/lienhe5.svg" alt="" />
+                  <div class="contact-noidung">
+                    <p class="contact-noidung-title">WEBSITE</p>
+                    <div class="contact-info">
+                      <p class="contact-p-info">www.huecit.vn</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="contact-form">
+              <form class="contact-form-form" action="">
+                <div id="form-input-name">
+                  <label for="">Họ và tên</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="name"
+                    id="input-form-contact-name"
+                    placeholder="Ví dụ: Nguyễn Văn A"
+                  />
+                </div>
+                <div id="form-row">
+                  <div id="form-input-row-email">
+                    <label for="">Email</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="email"
+                      id="input-form-contact-row"
+                      placeholder="nva@gmail.com"
+                    />
+                  </div>
+                  <div id="form-input-row-phone">
+                    <label for="">Số điện thoại </label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      name="name"
+                      id="input-form-contact-row"
+                      placeholder="0912 111 222"
+                    />
+                  </div>
+                </div>
+                <div id="form-input-noidung">
+                  <label for="">Nội dung</label>
+                  <textarea
+                    id="input-form-contact"
+                    class="form-control"
+                    aria-label="With textarea"
+                    placeholder="Nhập vào nội dung bạn muốn gửi..."
+                  ></textarea>
+                </div>
+                <div id="button">
+                  <button><p>GỬI</p></button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- --------------------lien he section-------------------- -->
+    </main>
+    <!-- --------------------main-------------------- -->
+
+    <!-- --------------------footer-------------------- -->
+    <footer>
+      <div id="footer">
+        <div class="container-sm">
+          <div class="footer-content">
+            <p class="footer-left">HỆ THỐNG VÉ ĐIỆN TỬ</p>
+            <p class="footer-right">THIẾT KẾ BỞI</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- --------------------footer-------------------- -->
+    <div id="back-to-top" title="Back to Top">
+      <!-- <i class="fa-solid fa-arrow-up"></i> -->
+      <img src="./public/images/backtotop.svg" alt="" />
+    </div>
+  </body>
+  <script>
+    if ($("#back-to-top").length) {
+      var scrollTrigger = 500,
+        backToTop = function () {
+          var scrollTop = $(window).scrollTop();
+          if (scrollTop > scrollTrigger) {
+            $("#back-to-top").addClass("show");
+          } else {
+            $("#back-to-top").removeClass("show");
+          }
+        };
+      backToTop();
+      $(window).on("scroll", function () {
+        backToTop();
+      });
+      $("#back-to-top").on("click", function (e) {
+        e.preventDefault();
+        $("html,body").animate(
+          {
+            scrollTop: 0,
+          },
+          500
+        );
+      });
+    }
+  </script>
+</html>
