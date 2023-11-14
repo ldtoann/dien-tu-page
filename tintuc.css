@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Onest:wght@900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+html {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
 body {
   overflow-x: hidden;
   background: white;
@@ -635,6 +639,7 @@ footer {
 #footer {
   width: 100%;
   background: #ffad61;
+  padding: 12px 0px;
 }
 .footer-content {
   display: flex;
@@ -706,4 +711,17 @@ footer {
 
 #back-to-top.show {
   opacity: 1;
+}
+@media screen and (max-width: 991px) {
+  #back-to-top {
+    bottom: 28px;
+    right: 30px;
+  }
+}
+#tong-quan-section,
+#tinh-nang-section,
+#chuc-nang-section-1,
+#tin-tuc-section,
+#lien-he-section {
+  scroll-behavior: smooth;
 }
