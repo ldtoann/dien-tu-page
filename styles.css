@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Onest:wght@900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+html {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
 body {
   overflow-x: hidden;
   background: white;
@@ -19,7 +23,7 @@ header {
 }
 #navigation {
   width: 100%;
-  height: 56px; /*auto*/
+  height: auto; /*auto*/
   align-items: center;
   background: #ffad61;
   box-shadow: 0px 2px 4px 0px rgba(222, 131, 46, 0.2);
@@ -733,6 +737,8 @@ main {
   width: 100%;
   padding: 60px 0px;
   background-image: url("./public/images/chuc-nang-section-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .chuc-nang {
   display: flex;
@@ -926,7 +932,7 @@ main {
   width: 250px;
   height: 250px;
   border-radius: 125px;
-  box-shadow: 0px 0px 1px 0px rgba(255, 119, 87, 0.2);
+  /* box-shadow: 0px 0px 1px 0px rgba(255, 119, 87, 0.2); */
 }
 .list-thiet-bi p {
   color: #001848;
@@ -1497,6 +1503,7 @@ footer {
 #footer {
   width: 100%;
   background: #ffad61;
+  padding: 12px 0px;
 }
 .footer-content {
   display: flex;
@@ -1568,4 +1575,17 @@ footer {
 
 #back-to-top.show {
   opacity: 1;
+}
+@media screen and (max-width: 991px) {
+  #back-to-top {
+    bottom: 28px;
+    right: 30px;
+  }
+}
+#tong-quan-section,
+#tinh-nang-section,
+#chuc-nang-section-1,
+#tin-tuc-section,
+#lien-he-section {
+  scroll-behavior: smooth;
 }
