@@ -43,11 +43,29 @@ header {
   gap: 32px;
   color: #ffffff;
 }
-#menu-item {
+.menu-item {
   display: flex;
   padding: 16px 0px;
   align-items: flex-start;
   gap: 4px;
+  border-top: 3px solid transparent;
+  transition: 0.2s all;
+
+  position: relative;
+}
+.menu-item svg {
+  position: absolute;
+  top: -9px;
+}
+.menu-item:hover svg,
+.menu-item.active svg {
+  top: -1px;
+}
+.menu-item:hover,
+.menu-item.active {
+  position: relative;
+  border-top: 3px solid #fff;
+  justify-content: center;
 }
 #menu-item a {
   color: #fff;
@@ -59,6 +77,7 @@ header {
   text-transform: uppercase;
   text-decoration: none;
 }
+
 #nav-mobile {
   display: none;
 }
@@ -1119,6 +1138,7 @@ main {
   -webkit-box-orient: vertical;
   overflow: hidden;
   display: -webkit-box;
+  opacity: 0.7;
 }
 @media screen and (max-width: 992px) {
   .tin-tuc-content {
