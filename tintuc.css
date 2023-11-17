@@ -722,12 +722,12 @@ footer {
   border: 1px solid #ff7757;
   background: #fff;
   opacity: 0;
+  transition: 0.3s all;
 }
-
 #back-to-top:hover {
-  border: 2px solid #ff7757;
+  border: 1px solid #ff2f00;
+  background: rgb(255, 239, 235);
 }
-
 #back-to-top.show {
   opacity: 1;
 }
