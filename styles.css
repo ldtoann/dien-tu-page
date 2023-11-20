@@ -639,7 +639,7 @@ main {
   width: 64px;
   height: 64px;
   stroke-width: 1px;
-  stroke: #ff7757;
+  /* stroke: #ff7757; */
 }
 #tinh-nang-item-content {
   display: flex;
